@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>aspnet-Buildings.Api-3EC8B038-15C8-476D-9719-296AE9BD5A93</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.7" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Buildings.Data\Buildings.Data.csproj" />
+    <ProjectReference Include="..\Buildings.Model\Buildings.Model.csproj" />
+    <ProjectReference Include="..\Buildings.Repository\Buildings.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
