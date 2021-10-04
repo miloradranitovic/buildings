@@ -7,3 +7,5 @@
 /Buildings.Repository/bin
 /Buildings.Repository/obj
 /Buildings.Db/obj/Debug
+/.vs
+/Buildings.Db

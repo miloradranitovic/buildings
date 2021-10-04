@@ -22,14 +22,16 @@ namespace Buildings.Domain.Configuration
 
         public static void AddHandlers(this IServiceCollection serviceCollection)
         {
-            var types = GetIEntityTypes();
+            var types = GetHandlerTypes();
             foreach (Type type in types)
             {
-                serviceCollection.AddTransient(type);
+                var intrface = type.GetInterface($"I{type.Name}");
+
+                serviceCollection.AddTransient(intrface, type);
             }
         }
 
-        static IEnumerable<Type> GetIEntityTypes()
+        static IEnumerable<Type> GetHandlerTypes()
         {
             var type = typeof(BaseHandler);
             return AppDomain.CurrentDomain.GetAssemblies()

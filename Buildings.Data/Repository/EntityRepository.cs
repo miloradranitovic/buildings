@@ -38,9 +38,9 @@ namespace Buildings.Data.Repository
             T existing = _table.Find(id);
             _table.Remove(existing);
         }
-        public void Save()
+        public async Task<int> SaveAsync()
         {
-            _context.SaveChanges();
+            return await _context.SaveChangesAsync();
         }
 
     }

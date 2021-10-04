@@ -41,6 +41,8 @@ namespace Buildings.Domain.Handlers.Implementation
             var entity = _mapper.Map<Account>(dto);
 
             await _buildingRepository.InsertAsync(entity);
+
+            await _buildingRepository.SaveAsync();
         }
 
     }

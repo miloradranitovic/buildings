@@ -15,5 +15,7 @@ namespace Buildings.Domain.Data
         Task UpdateAsync(T obj);
 
         void Delete(Guid id);
+
+        Task<int> SaveAsync();
     }
 }
